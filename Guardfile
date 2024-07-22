@@ -18,19 +18,19 @@
 # and, you'll have to watch "config/Guardfile" instead of "Guardfile"
 
 # cucumber_options = {
-  # Below are examples overriding defaults
+# Below are examples overriding defaults
 
-  # cmd: 'bin/cucumber',
-  # cmd_additional_args: '--profile guard',
+# cmd: 'bin/cucumber',
+# cmd_additional_args: '--profile guard',
 
-  # all_after_pass: false,
-  # all_on_start: false,
-  # keep_failed: false,
-  # feature_sets: ['features/frontend', 'features/experimental'],
+# all_after_pass: false,
+# all_on_start: false,
+# keep_failed: false,
+# feature_sets: ['features/frontend', 'features/experimental'],
 
-  # run_all: { cmd_additional_args: '--profile guard_all' },
-  # focus_on: { 'wip' }, # @wip
-  # notification: false
+# run_all: { cmd_additional_args: '--profile guard_all' },
+# focus_on: { 'wip' }, # @wip
+# notification: false
 # }
 
 # guard 'cucumber', cucumber_options do

@@ -10,4 +10,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'dashboards#index'
+
+  resources :users do
+    resources :exercises
+  end
 end

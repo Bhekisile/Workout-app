@@ -2,6 +2,5 @@
 
 # This is a dashboard controller
 class DashboardsController < ApplicationController
-
   def index; end
 end
