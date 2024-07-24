@@ -16,4 +16,3 @@ class Exercise < ApplicationRecord
       .order(workout_date: :desc)
   end
 end
-
