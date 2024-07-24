@@ -4,3 +4,4 @@ import "controllers"
 
 //= require bootstrap-sprockets
 //= require jquery-ui/datepicker
+//= require d3

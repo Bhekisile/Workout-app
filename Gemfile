@@ -45,6 +45,7 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
+gem 'd3-rails', '4.1.0'
 gem 'devise', '~>4.9.3'
 gem 'jquery-ui-rails', '5.0.5'
 
