@@ -2,7 +2,9 @@
 
 # This is an exercises controller
 class ExercisesController < ApplicationController
-  def index; end
+  def index
+    @exercises = current_user.exercises
+  end
 
   def show
     @exercise = current_user.exercises.find params[:id]

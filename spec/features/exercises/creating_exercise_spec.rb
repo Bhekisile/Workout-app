@@ -15,7 +15,6 @@ RSpec.feature 'Creating Exercise' do
   end
 
   scenario 'with valid inputs' do
-
     fill_in 'Duration', with: 70
     fill_in 'Workout details', with: 'Weight lifting'
     fill_in 'Activity date', with: '2016-07-26'
@@ -29,7 +28,6 @@ RSpec.feature 'Creating Exercise' do
   end
 
   scenario 'with invalid inputs' do
-
     fill_in 'Duration', with: ''
     fill_in 'Workout details', with: ''
     fill_in 'Activity date', with: ''
