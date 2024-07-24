@@ -47,13 +47,4 @@ RSpec.feature 'Listing Exercises' do
 
     expect(page).to have_content('No Workouts Yet')
   end
-
-  # scenario "shows a list of user's friends" do
-  #   visit '/'
-
-  #   click_link 'My Lounge'
-  #   expect(page).to have_content('My Friends')
-  #   expect(page).to have_link(@sarah.full_name)
-  #   expect(page).to have_link('Unfollow')
-  # end
 end

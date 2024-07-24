@@ -5,7 +5,8 @@ require 'rails_helper'
 RSpec.feature 'Users signup' do
   scenario 'with valid credentials' do
     visit '/'
-    click_link 'Sign up'
+
+    click_on 'Sign up'
     fill_in 'Email', with: 'user@example.com'
     fill_in 'Password', with: 'password'
     fill_in 'Password confirmation', with: 'password'
