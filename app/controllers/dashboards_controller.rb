@@ -2,5 +2,7 @@
 
 # This is a dashboard controller
 class DashboardsController < ApplicationController
-  def index; end
+  def index
+    @athletes = User.all
+  end
 end
