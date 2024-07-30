@@ -39,7 +39,7 @@ RSpec.feature 'Listing Exercises' do
   end
 
   scenario 'shows no exercises if none created' do
-    @john.exercises.delete_all
+    @john.exercises.destroy_all
 
     visit '/'
 
