@@ -40,6 +40,10 @@
     class: "btn btn-success link" %>
     
 <%= content_tag :div, "", id: "chart", data: { workouts: @exercises } %>
+<%# <div id="chart" data-workouts='[{"workout_date": "2023-07-01", "duration_in_min": 30}, {"workout_date": "2023-07-02", "duration_in_min": 45}]'>
+  Chart <%= data: { workouts: @exercises } %>
+<%# </div> %>
+
 </div>
 
 <div class='col-md-4 col-xs-12'>
