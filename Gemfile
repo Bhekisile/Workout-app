@@ -47,9 +47,10 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 gem 'bootsnap', require: false
 gem 'd3-rails', '4.1.0'
 gem 'devise', '~>4.9.3'
+gem 'jquery-rails'
 gem 'jquery-ui-rails', '5.0.5'
-
 gem 'wdm', '>= 0.1.0'
+gem 'will_paginate-bootstrap', '~> 1.0.1'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
