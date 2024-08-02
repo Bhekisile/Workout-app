@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_08_02_053903) do
+ActiveRecord::Schema[7.1].define(version: 2024_08_02_061424) do
   create_table "exercises", force: :cascade do |t|
     t.integer "duration_in_min"
     t.text "workout"
@@ -28,6 +28,16 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_02_053903) do
     t.datetime "updated_at", null: false
     t.index ["friend_id"], name: "index_friendships_on_friend_id"
     t.index ["user_id"], name: "index_friendships_on_user_id"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text "body"
+    t.integer "user_id", null: false
+    t.integer "room_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["room_id"], name: "index_messages_on_room_id"
+    t.index ["user_id"], name: "index_messages_on_user_id"
   end
 
   create_table "rooms", force: :cascade do |t|
@@ -53,5 +63,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_08_02_053903) do
   end
 
   add_foreign_key "exercises", "users"
+  add_foreign_key "messages", "rooms"
+  add_foreign_key "messages", "users"
   add_foreign_key "rooms", "users"
 end
