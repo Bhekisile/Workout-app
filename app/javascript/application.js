@@ -7,3 +7,4 @@
 //= require d3
 // require turbolinks
 //= require exercise
+import "channels"

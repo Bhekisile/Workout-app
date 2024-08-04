@@ -10,3 +10,5 @@ pin 'jquery', to: 'jquery.min.js', preload: true
 pin 'jquery_ujs', to: 'jquery_ujs.min.js', preload: true
 pin 'd3', to: 'https://cdn.jsdelivr.net/npm/d3@7'
 # pin 'popper', to: 'popper.js', preload: true
+pin "@rails/actioncable", to: "actioncable.esm.js"
+pin_all_from "app/javascript/channels", under: "channels"
