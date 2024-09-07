@@ -39,7 +39,7 @@
     <br>
   <% end %>
   <%= link_to 'New Workout', new_user_exercise_path(current_user),
-      class: "btn btn-success link" %>
+      class: "btn btn-primary link" %>
       
   <%= content_tag :div, "", id: "chart", data: { workouts: @exercises } %>
 
@@ -83,7 +83,7 @@
         <div class='btn-unfollow'>
           <%= link_to 'Unfollow', friendship_path(current_user.current_friendship(friend)),
             method: :delete, data: { confirm: 'Are you sure?' },
-            class: 'btn btn-success link' %>
+            class: 'btn btn-primary link' %>
         </div>
       </div>
     <% end %>

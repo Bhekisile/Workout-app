@@ -7,6 +7,8 @@ class MessagesController < ApplicationController
 
     @message.save
     redirect_to user_exercises_path(current_user)
+    ActionCable.server.broadcast "messages_room_#{current_room.id}", {partial: 'shared/message', object: @message}
+    # ActionCable.server.broadcast "messages_room_#{current_room.id}", render(partial: 'shared/message', object: @message)
   end
 
   private

@@ -1,4 +1,4 @@
-// console.log("Hello from exercise.js");
+console.log("Hello from exercise.js");
 
 $(document).ready(function() {
   $("#exercise_workout_date").datepicker({ dateFormat: 'yy-mm-dd' });
