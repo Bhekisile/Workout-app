@@ -1,5 +1,7 @@
 import consumer from "./consumer"
 
+console.log("messages_channel.js loaded");
+
 // consumer.subscriptions.create("MessagesChannel", {
 //   connected() {
 //     // Called when the subscription is ready for use on the server
@@ -37,7 +39,7 @@ import consumer from "./consumer"
     // Called when the subscription is ready for use on the server
     const roomId = $("#chat-box").data("room-id");
     this.checkIn(roomId);
-    console.log("Connected to the chat room!");
+    // console.log("Connected to the chat room!");
   },
 
   disconnected() {

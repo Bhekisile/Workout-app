@@ -62,7 +62,8 @@ body {
 }
 
 .sign-out:hover {
-  color: #00cccc;
+  color: #39FF14;
+  /* color: #00cccc; */
 }
 
  /* Form styling */
@@ -147,6 +148,15 @@ path {
 
 .message-body {
   margin-bottom: 2px;
+}
+
+.message-row {
+  margin-top: 10px;
+}
+
+small {
+  color: #0066CC;
+  font-style: italic;
 }
 
 hr.msg {

@@ -14,6 +14,7 @@
         </tr>
       </thead>
       <tbody>
+        <% unless @exercises.blank? %>
         <% @exercises.each do |exercise| %>
           <tr>
             <td><%= exercise.duration_in_min %></td>

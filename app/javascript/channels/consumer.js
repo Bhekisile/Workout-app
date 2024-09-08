@@ -3,7 +3,7 @@
 
 import { createConsumer } from "@rails/actioncable"
 
-ActionCable.createConsumer();
+// ActionCable.createConsumer();
 
-export default createConsumer("http://localhost:3000/cable")
+export default createConsumer()
 
