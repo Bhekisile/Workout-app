@@ -21,7 +21,7 @@ body {
 }
 
 .navbar-header a.navbar-brand:hover {
-  color: #00cccc;
+  color: #39FF14;
 }
 
 .nav > li > a {
@@ -45,7 +45,7 @@ body {
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-  color: #00cccc;
+  color: #39FF14;
 }
 
 .navbar-form {
@@ -126,6 +126,7 @@ path {
   border: 1px solid #0066CC;
   margin-top: 50px;
   margin-bottom: 30px;
+  margin-left: 200px;
 }
 
 #chat-window header {
@@ -143,7 +144,7 @@ path {
 }
 
 #message-field {
-  width: 96%;
+  width: 92%;
 }
 
 .message-body {

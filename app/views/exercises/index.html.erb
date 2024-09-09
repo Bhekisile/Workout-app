@@ -15,17 +15,18 @@
       </thead>
       <tbody>
         <% unless @exercises.blank? %>
-        <% @exercises.each do |exercise| %>
-          <tr>
-            <td><%= exercise.duration_in_min %></td>
-            <td><%= truncate(exercise.workout, length: 100) %></td>
-            <td><%= exercise.workout_date %></td>
-            <td><%= link_to 'Show', [current_user, exercise] %></td>
-            <td><%= link_to 'Edit', [:edit, current_user, exercise]
-              %></td>
-            <td><%= link_to 'Destroy', [current_user, exercise],
-            method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
+          <% @exercises.each do |exercise| %>
+            <tr>
+              <td><%= exercise.duration_in_min %></td>
+              <td><%= truncate(exercise.workout, length: 100) %></td>
+              <td><%= exercise.workout_date %></td>
+              <td><%= link_to 'Show', [current_user, exercise] %></td>
+              <td><%= link_to 'Edit', [:edit, current_user, exercise]
+                %></td>
+              <td><%= link_to 'Destroy', [current_user, exercise],
+              method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
         <% end %>
       </tbody>
     </table>
@@ -58,18 +59,18 @@
       </div>
 
       <div class='col-md-10' id='messages-box'>
-        <div id='chat-box' data-channel='rooms data-room-id=<%= current_room.id %>>
-        <% @messages.each do |message| %>
-          <%= render partial: 'shared/message', locals: { message: message } %>
-        <% end %>
-      </div>
+        <div id='chat-box' data-channel='rooms' data-room-id=<%= current_room.id %>>
+          <% @messages.each do |message| %>
+            <%= render partial: 'shared/message', locals: { message: message } %>
+          <% end %>
+        </div>
 
-      <div id='form-box'>
-        <%= form_for @message do |f| %>
-          <%= f.text_field :body, id: 'message-field', class: 'form-control pull-left' %>
-          <%= f.submit 'Post', class: 'btn btn-default', id: 'post-btn' %>
-        <% end %>
-      </div>
+        <div id='form-box'>
+          <%= form_for @message, remote:true do |f| %>
+            <%= f.text_field :body, id: 'message-field', class: 'form-control pull-left' %>
+            <%= f.submit 'Post', class: 'btn btn-default', id: 'post-btn' %>
+          <% end %>
+        </div>
       </div>
 
     </div>

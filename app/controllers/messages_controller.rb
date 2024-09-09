@@ -5,10 +5,14 @@ class MessagesController < ApplicationController
     @message = current_user.messages.build(message_params)
     @message.room = current_room
 
-    @message.save
-    # redirect_to user_exercises_path(current_user)
-    ActionCable.server.broadcast "messages_room_#{current_room.id}", {partial: 'shared/message', object: @message}
-    # ActionCable.server.broadcast "messages_room_#{current_room.id}", render(partial: 'shared/message', object: @message)
+    if @message.save
+      respond_to do |format|
+        format.html { redirect_to user_exercises_path(current_user) }
+        format.js {
+          ActionCable.server.broadcast "messages_room_#{current_room.id}", render_to_string(partial: 'shared/message', object: @message)
+        }
+      end
+    end
   end
 
   private
