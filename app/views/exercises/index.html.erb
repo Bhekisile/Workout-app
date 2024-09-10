@@ -47,8 +47,8 @@
 
   </div>
 
-  <div class='col-md-5 col-xs-12'>
-    <div id='chat-window' class='col-md-12'>
+  <div class='col-md-5'>
+    <div id='chat-window' class='col-md-12 col-xs-12'>
       <header class='text-center'>Channel: <%= current_room.name %></header>
 
       <div class="col-md-2" id="followers">
@@ -74,7 +74,7 @@
       </div>
 
     </div>
-    <h1 class='text-center'>My Friends</h1>
+    <h1 class='text-center ms-200'>My Friends</h1>
 
     <% @friends.each do |friend| %>
       <div class='col-md-offset-3 col-md-6 friend_name'>
