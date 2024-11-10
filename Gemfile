@@ -10,8 +10,8 @@ gem 'rails', '~> 7.1.3', '>= 7.1.3.4'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+# Use pg as the database for Active Record
+gem "pg", "~> 1.1"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '>= 5.0'
@@ -31,6 +31,8 @@ gem 'jbuilder'
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
+gem 'jsbundling-rails'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -45,7 +47,7 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
-gem 'd3-rails', '4.1.0'
+gem 'd3-rails', '~> 7.0.0'
 gem 'devise', '~>4.9.3'
 gem 'jquery-rails'
 gem 'jquery-ui-rails', '5.0.5'

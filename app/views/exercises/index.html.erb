@@ -14,17 +14,19 @@
         </tr>
       </thead>
       <tbody>
-        <% @exercises.each do |exercise| %>
-          <tr>
-            <td><%= exercise.duration_in_min %></td>
-            <td><%= truncate(exercise.workout, length: 100) %></td>
-            <td><%= exercise.workout_date %></td>
-            <td><%= link_to 'Show', [current_user, exercise] %></td>
-            <td><%= link_to 'Edit', [:edit, current_user, exercise]
-              %></td>
-            <td><%= link_to 'Destroy', [current_user, exercise],
-            method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
+        <% unless @exercises.blank? %>
+          <% @exercises.each do |exercise| %>
+            <tr>
+              <td><%= exercise.duration_in_min %></td>
+              <td><%= truncate(exercise.workout, length: 100) %></td>
+              <td><%= exercise.workout_date %></td>
+              <td><%= link_to 'Show', [current_user, exercise] %></td>
+              <td><%= link_to 'Edit', [:edit, current_user, exercise]
+                %></td>
+              <td><%= link_to 'Destroy', [current_user, exercise],
+              method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
         <% end %>
       </tbody>
     </table>
@@ -39,14 +41,14 @@
     <br>
   <% end %>
   <%= link_to 'New Workout', new_user_exercise_path(current_user),
-      class: "btn btn-success link" %>
+      class: "btn btn-primary link" %>
       
   <%= content_tag :div, "", id: "chart", data: { workouts: @exercises } %>
 
   </div>
 
-  <div class='col-md-4 col-xs-12'>
-    <div id='chat-window'>
+  <div class='col-md-5'>
+    <div id='chat-window' class='col-md-12 col-xs-12'>
       <header class='text-center'>Channel: <%= current_room.name %></header>
 
       <div class="col-md-2" id="followers">
@@ -56,20 +58,23 @@
         <% end %>
       </div>
 
-      <div id='chat-box' data-channel='rooms data-room-id=<%= current_room.id %>>
-        <% @messages.each do |message| %>
-          <%= render partial: 'shared/message', locals: { message: message } %>
-        <% end %>
+      <div class='col-md-10' id='messages-box'>
+        <div id='chat-box' data-channel='rooms' data-room-id=<%= current_room.id %>>
+          <% @messages.each do |message| %>
+            <%= render partial: 'shared/message', locals: { message: message } %>
+          <% end %>
+        </div>
+
+        <div id='form-box'>
+          <%= form_for @message, remote:true do |f| %>
+            <%= f.text_field :body, id: 'message-field', class: 'form-control pull-left' %>
+            <%= f.submit 'Post', class: 'btn btn-default', id: 'post-btn' %>
+          <% end %>
+        </div>
       </div>
 
-      <div id='form-box'>
-        <%= form_for @message do |f| %>
-          <%= f.text_field :body, id: 'message-field', class: 'form-control pull-left' %>
-          <%= f.submit 'Post', class: 'btn btn-default', id: 'post-btn' %>
-        <% end %>
-      </div>
     </div>
-    <h1 class='text-center'>My Friends</h1>
+    <h1 class='text-center ms-200'>My Friends</h1>
 
     <% @friends.each do |friend| %>
       <div class='col-md-offset-3 col-md-6 friend_name'>
@@ -80,7 +85,7 @@
         <div class='btn-unfollow'>
           <%= link_to 'Unfollow', friendship_path(current_user.current_friendship(friend)),
             method: :delete, data: { confirm: 'Are you sure?' },
-            class: 'btn btn-success link' %>
+            class: 'btn btn-primary link' %>
         </div>
       </div>
     <% end %>

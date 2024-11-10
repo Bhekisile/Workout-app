@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@rails/actioncable": "^7.2.100",
+    "jquery": "^3.7.1",
+    "jquery-datepicker": "^1.12.3",
+    "jquery-ui": "^1.14.0",
+    "jquery-ujs": "^1.2.3"
+  },
+  "devDependencies": {
+    "esbuild": "^0.23.1"
+  },
+  "scripts": {
+    "build": "esbuild app/javascript/*.* --bundle --sourcemap --format=esm --outdir=app/assets/builds --public-path=/assets"
+  }
+}
