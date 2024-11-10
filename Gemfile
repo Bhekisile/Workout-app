@@ -51,7 +51,6 @@ gem 'd3-rails', '~> 7.0.0'
 gem 'devise', '~>4.9.3'
 gem 'jquery-rails'
 gem 'jquery-ui-rails', '5.0.5'
-# gem 'wdm', '>= 0.1.0'
 gem 'will_paginate-bootstrap', '~> 1.0.1'
 gem 'listen', '~> 3.0'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
