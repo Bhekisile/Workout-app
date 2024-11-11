@@ -25,7 +25,7 @@
 
 # 📖 [Workout App] <a name="about-project"></a>
 
-**[Workout App]** is built with Ruby on Rails, Bootstrap CSS, d3.js, and Rails Action Cable. It is created for the users who like to keep track of their physical activities. The app allows a user to record an activity type, duration, and date. There is a chart that is updated every time the user saves the data. The user can create friendships and start following and chatting with each other.
+**[Workout App]** is built with Ruby on Rails, Bootstrap CSS, d3.js, and Rails Action Cable. It is created for the users who like to keep track of their physical activities. The app allows a user to record an activity type, duration, and date. There is a chart that is updated every time the user entering the data. The user can create friendships and start following and chatting with each other.
 
 ## 🛠 Built With <a name="built-with"></a>
 
