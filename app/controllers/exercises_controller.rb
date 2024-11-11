@@ -5,6 +5,7 @@ class ExercisesController < ApplicationController
   before_action :set_exercise, only: %i[show edit update destroy]
 
   def index
+    if exercises.present?
     @exercises = current_user.exercises
     @friends = current_user.friends
     set_current_room
@@ -16,6 +17,7 @@ class ExercisesController < ApplicationController
   def show; end
 
   def new
+    if exercises.present?
     @exercise = current_user.exercises.new
   end
 
