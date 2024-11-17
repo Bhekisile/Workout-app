@@ -8,18 +8,17 @@
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
     <script src="https://d3js.org/d3.v5.min.js" charset="utf-8" defer></script>
 
-    <%= stylesheet_link_tag "application" "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module", defer: true %>
   </head>
 
   <body>
     <%= render 'shared/header' %>
 
+    <%= yield %>
     <%= render 'shared/main' %>
     
     <%= render 'shared/footer' %>
 
-    <%= yield %>
-    
   </body>
 </html>
