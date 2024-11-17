@@ -5,18 +5,22 @@ class ExercisesController < ApplicationController
   before_action :set_exercise, only: %i[show edit update destroy]
 
   def index
-    @exercises = current_user.exercises
-    @friends = current_user.friends
-    set_current_room
-    @message = Message.new
-    @messages = current_room.messages if current_room
-    @followers = Friendship.where(friend_id: current_user.id)
+    if exercises.present?
+      @exercises = current_user.exercises
+      @friends = current_user.friends
+      set_current_room
+      @message = Message.new
+      @messages = current_room.messages if current_room
+      @followers = Friendship.where(friend_id: current_user.id)
+    end
   end
 
   def show; end
 
   def new
-    @exercise = current_user.exercises.new
+    if exercises.present?
+      @exercise = current_user.exercises.new
+    end
   end
 
   def create

@@ -14,6 +14,7 @@
 #
 default: &default
   adapter: postgresql
+  encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
@@ -24,10 +25,10 @@ development:
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
-  username: 
+  username: postgres
 
   # The password associated with the PostgreSQL role (username).
-  password: 
+  password: cherry
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -53,8 +54,8 @@ development:
 test:
   <<: *default
   database: workout_app_test
-  username: 
-  password: 
+  username: postgres
+  password: cherry
   host: localhost
 
 # As with config/credentials.yml, you never want to store sensitive information,
@@ -81,3 +82,5 @@ production:
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
   database: workout_app_production
+  username: workout_app
+  password: <%= ENV['WORKOUT_APP_DATABASE_PASSWORD'] %>

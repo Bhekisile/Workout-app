@@ -25,7 +25,7 @@
 
 # 📖 [Workout App] <a name="about-project"></a>
 
-**[Workout App]** is built with Ruby on Rails, Bootstrap CSS, d3.js, and Rails Action Cable. It is created for the users who like to keep track of their physical activities. The app allows a user to record an activity type, duration, and date. There is a chart that is updated every time the user saves the data. The user can create friendships and start following and chatting with each other.
+**[Workout App]** is built with Ruby on Rails, Bootstrap CSS, d3.js, and Rails Action Cable. The app is created for users who enjoy tracking their physical activities. The app allows a user to record an activity type, duration, and date. Every time the user enters data, a chart updates. The user can create friendships and start following and chatting with each other.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -42,7 +42,7 @@
 <details>
 <summary>Database</summary>
   <ul>
-    <li>sqlite3</li>
+    <li>PostgreSQL</li>
   </ul>
 </details>
 
@@ -69,7 +69,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://workout-app-2j1m.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -102,7 +102,7 @@ bundle install
 
 To run the project, execute the following command:
 
-  bin/dev
+  rails s
 
 <!-- AUTHORS -->
 
@@ -146,7 +146,7 @@ If you like this project please give it a star.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Udemy and course instructors for the necessary knowledge I need to make this project.
+I would like to thank Udemy and course instructors for the necessary knowledge I received in order to build this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

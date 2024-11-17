@@ -113,6 +113,10 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.5.1)
+    dotenv (3.1.2)
+    dotenv-rails (3.1.2)
+      dotenv (= 3.1.2)
+      railties (>= 6.1)
     drb (2.2.1)
     erubi (1.13.0)
     execjs (2.9.1)
@@ -352,6 +356,7 @@ DEPENDENCIES
   d3-rails (~> 7.0.0)
   debug
   devise (~> 4.9.3)
+  dotenv-rails
   guard
   guard-rspec (~> 4.7, >= 4.7.3)
   importmap-rails
